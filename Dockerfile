@@ -2,7 +2,5 @@ FROM nvidia/cuda:10.0-devel-ubuntu18.04
 
 RUN apt update && apt -y upgrade
 RUN apt install -y wget
-RUN wget https://www.anaconda.com/download/#linux | bash
-ENV PATH=/root/anaconda/bin:$PATH
-
-# RUN conda install pycuda
+RUN wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh | bash -b
+RUN ~/anaconda3/bin/conda init
